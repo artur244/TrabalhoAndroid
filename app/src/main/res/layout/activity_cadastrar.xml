@@ -1,76 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".CadastrarActivity" android:visibility="visible">
-
-    <TableLayout
-            android:layout_width="0dp"
+        tools:context=".CadastrarActivity" android:visibility="visible" android:orientation="vertical">
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView2"/>
+    <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tableLayout"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="8dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.4">
-
-        <TableRow android:layout_width="wrap_content" android:layout_height="match_parent">
-            <TextView
-                    android:text="Título"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView2" android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-            />
-        </TableRow>
-        <TableRow android:layout_width="56dp" android:layout_height="34dp">
-            <EditText
-                    android:layout_width="193dp"
-                    android:layout_height="match_parent"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/etTitulo"/>
-        </TableRow>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
-            <TextView
-                    android:text="Descrição"
-                    android:layout_width="352dp"
-                    android:layout_height="match_parent" android:id="@+id/textView4"/>
-        </TableRow>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
-            <EditText
-                    android:layout_width="272dp"
-                    android:layout_height="172dp"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/etDesc"/>
-        </TableRow>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
-            <TextView
-                    android:text="Preço"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/textView5"/>
-        </TableRow>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
-            <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:id="@+id/etPreco"/>
-        </TableRow>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
-            <Button
-                    android:text="Cadastrar"
-                    android:layout_width="190dp"
-                    android:layout_height="match_parent" android:id="@+id/btnCadastrar"/>
-        </TableRow>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
-        <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
-
-    </TableLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/etTitulo"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView4"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="147dp"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/etDesc"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView5"/>
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/etPreco"/>
+    <Button
+            android:text="Cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/btnCadastrar" android:onClick="save"/>
+</LinearLayout>

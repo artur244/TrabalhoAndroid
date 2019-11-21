@@ -1,19 +1,22 @@
 package com.example.myapplication
 
+import com.example.myapplication.Livro
+import com.example.myapplication.LivroDAO
+
 import androidx.lifecycle.LiveData
 
 class LivroRepository(private val livroDAO: LivroDAO) {
     fun insert(livro: Livro){
-        LivroDAO.insert(livro)
+        livroDAO.insert(livro)
     }
 
     fun update(livro: Livro){
-        LivroDAO.update(livro)
+        livroDAO.update(livro)
     }
 
     fun delete(livro: Livro) =
-        LivroDAO.delete(livro)
+        livroDAO.delete(livro)
 
 
-    val livros: LiveData<List<Livro>> = LivroDAO.getAll()
+    val livros: LiveData<List<Livro>> = livroDAO.getAll()
 }

@@ -1,9 +1,13 @@
 package com.example.myapplication
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import java.io.Serializable
 
 
 @Entity(tableName = "livro_tb")
-class Livro {
+class Livro (
     @ColumnInfo(name = "titulo")
     var titulo: String = "",
 
@@ -11,9 +15,9 @@ class Livro {
     var descricao: String = "",
 
     @ColumnInfo(name = "preco")
-    var preco: Int = "",
+    var preco: String = ""
 
-}: Serializable{
+): Serializable{
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
 }
