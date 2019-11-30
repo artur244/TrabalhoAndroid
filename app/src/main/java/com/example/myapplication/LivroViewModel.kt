@@ -39,4 +39,8 @@ class LivroViewModel(application: Application): AndroidViewModel(application) {
     fun delete(livro: Livro) = scope.launch(Dispatchers.IO){
         repository.delete(livro)
     }
+
+    fun deleteAll() = scope.launch(Dispatchers.IO){
+        repository.deleteAll()
+    }
 }

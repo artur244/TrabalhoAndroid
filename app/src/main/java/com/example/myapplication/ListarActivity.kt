@@ -5,11 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_gerenciar.*
 import kotlinx.android.synthetic.main.activity_listar.*
+import kotlinx.android.synthetic.main.activity_listar.btnCadastrar
 
 
 class ListarActivity : AppCompatActivity() {
@@ -26,6 +29,11 @@ class ListarActivity : AppCompatActivity() {
         recyclerView = recycler_livros
 
         montaLista(recyclerView)
+
+        btnCadastrar.setOnClickListener {
+            val cadastrar = Intent(this, CadastrarActivity::class.java)
+            startActivityForResult(cadastrar, REQUEST_CODE)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -43,6 +51,11 @@ class ListarActivity : AppCompatActivity() {
 
                     livro.let {
                         livroViewModel.insert(livro)
+                        Toast.makeText(
+                            this,
+                            "Objeto Cdastrado com Sucesso!",
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
                 } catch (e: Exception){
                     Log.d("TAG: ", e.message)

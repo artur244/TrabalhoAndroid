@@ -16,17 +16,16 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
     >
-        <Button
-                android:text="Cadastrar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/btnCadastrar"/>
+
         <Button
                 android:text="Editar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" android:id="@+id/btnEditar"/>
+
         <Button
-                android:text="Excluir"
+                android:id="@+id/btnExcluir"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" android:id="@+id/btnExcluir"/>
+                android:layout_height="wrap_content"
+                android:text="Excluir Todos" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

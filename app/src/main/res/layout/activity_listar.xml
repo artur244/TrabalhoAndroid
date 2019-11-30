@@ -7,6 +7,12 @@
         android:layout_height="match_parent"
         tools:context=".ListarActivity" android:orientation="vertical">
 
+    <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar" />
+
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent" android:id="@+id/recycler_livros"/>

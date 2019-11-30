@@ -17,6 +17,7 @@ class LivroRepository(private val livroDAO: LivroDAO) {
     fun delete(livro: Livro) =
         livroDAO.delete(livro)
 
+    fun deleteAll() = livroDAO.deleteAll()
 
     val livros: LiveData<List<Livro>> = livroDAO.getAll()
 }

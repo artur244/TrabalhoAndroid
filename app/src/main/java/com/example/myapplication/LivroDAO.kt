@@ -15,6 +15,9 @@ interface LivroDAO {
     @Delete
     fun delete(livro: Livro)
 
+    @Query("DELETE FROM livro_tb")
+    fun deleteAll()
+
     @Query("SELECT * FROM livro_tb ORDER BY titulo ASC")
     fun getAll(): LiveData<List<Livro>>
 

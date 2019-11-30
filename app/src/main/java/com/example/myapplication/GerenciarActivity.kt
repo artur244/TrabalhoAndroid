@@ -8,13 +8,14 @@ import kotlinx.android.synthetic.main.activity_gerenciar.*
 
 class GerenciarActivity : AppCompatActivity() {
 
+    private lateinit var livroViewModel: LivroViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gerenciar)
 
-        btnCadastrar.setOnClickListener {
-            val cadastrar = Intent(this, CadastrarActivity::class.java)
-            startActivity(cadastrar)
+        btnExcluir.setOnClickListener {
+            livroViewModel.deleteAll()
         }
 
         btnEditar.setOnClickListener {
